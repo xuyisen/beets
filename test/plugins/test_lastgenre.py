@@ -16,7 +16,7 @@ from beetsplug.lastgenre.utils import is_ignored, normalize_genre
 _p = pytest.param
 
 
-class LastGenrePluginTest(IOMixin, PluginTestHelper):
+class TestLastGenrePlugin(IOMixin, PluginTestHelper):
     plugin = "lastgenre"
 
     def setUp(self):
