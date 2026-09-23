@@ -262,8 +262,9 @@ class SmartPlaylistTest(_common.TestCase):
         spl._matched_playlists = [pl]
 
         dir = bytestring_path(mkdtemp())
-        tpl = "http://beets:8337/item/$id/file"
-        config["smartplaylist"]["uri_format"] = tpl
+        config["smartplaylist"][
+            "uri_format"
+        ] = "http://beets:8337/item/$id/file"
         config["smartplaylist"]["playlist_dir"] = py3_path(dir)
         # The following options should be ignored when uri_format is set
         config["smartplaylist"]["relative_to"] = "/data"
